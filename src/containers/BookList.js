@@ -9,21 +9,29 @@ import { bindActionCreators } from 'redux';
 class BookList extends Component {
   render() {
 
+let koob = {
+  textAlign:"center",
+  fontSize:20
+}
     //must create a map function here to return the following:
 
 let books = this.props.books;
 let ListOBooks = books.map((book) => {
 
+  let indi = {
+    padding:10
+  }
+
 return (
-  <li
+  <div style={indi}
     key={book.id}
     onClick={() => this.props.selectBook(book)}
-    className="list-group-item">{book.title}</li>
+    className="list-group-item">{book.title}</div>
   )
 });
 
     return (
-      <ul className="list-group col-sm-4">
+      <ul style={koob} className="list-group col-sm-4">
         {ListOBooks}
       </ul>
     );

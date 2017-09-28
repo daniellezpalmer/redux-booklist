@@ -6,9 +6,19 @@ import BookDetail from '../containers/BookDetail';
 
 class App extends Component {
     render() {
+
+let bg = {
+color:"teal",
+fontFamily:"Raleway"
+}
+
+let title = {
+  textAlign:"center"
+}
+
         return (
-            <div className="row">
-                <h1>Books N' Roses: Appetite for Instruction</h1>
+            <div style={bg} className="row">
+                <h1 style={title}>Books N' Roses: Appetite for Instruction</h1>
                 <BookList/>
                 <BookDetail/>
             </div>
